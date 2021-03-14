@@ -12,6 +12,26 @@ import string
 import sentencepiece as spm
 
 class Preprocessor():
+    
+    Class Question:
+	def init(self, QuestID: str, question: str language):
+		self.QuestID = QuestID
+		self.quest = question
+       		self.lang = language
+                self.source = null
+                self.ans = null 
+		self.embedding = get.embedding()
+
+        def answer(self, source : DataSource, answer : str) 
+		//after scanners are used, assign 'answer' to Question along with
+                  the data source the information was pulled from
+                self.source = DataSource
+                self.ans = answer
+
+        def translate(self, QuestID, language):
+                if self.lang != language 
+                self.lang = language  //translate to parameterized language 
+		return self.quest
 
     def __init__(self, language = 'english', instream = None):
         self.language = language
