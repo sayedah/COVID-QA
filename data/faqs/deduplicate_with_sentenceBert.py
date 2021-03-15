@@ -3,6 +3,29 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
+#Aggregate Pattern
+Class Question:
+	def init(self, QuestID: str, question: str language: str):
+		self.QuestID = QuestID
+		self.quest = question
+       	self.lang = language
+        self.source = null
+        self.ans = null 
+
+     #assign an answer to the question  
+	def answer(self, source : DataSource, answer : str) 
+		#after scrapers/ElasticSearch are used, assign 'answer' to Question along with the data source the information was pulled from
+        self.source = DataSource
+        self.ans = answer
+
+     #translate the object to another language
+	def translate(self, QuestID, language):
+        if self.lang != language 
+           self.lang = language  #translate to parameterized language 
+		return self.quest, self.ans
+##  
+    
+    
 # loading questions and calculating similarities based of sentence bert embeddings
 df = pd.read_csv("200416_englishFAQ.csv",sep=",")
 if df.columns[0] != "question":
