@@ -7,6 +7,28 @@ from haystack.database.elasticsearch import ElasticsearchDocumentStore
 from haystack.retriever.elasticsearch import ElasticsearchRetriever
 from scrapy.crawler import CrawlerProcess
 
+//A scrapper will serve as the root of this aggregate. To access anything from a Data Source, information must be returned by a scrapper first. Nothing in the Data Source is ever modified, excluding upon initialization; it is only referenced 
+Class DataSource:
+	def init(self, url: str, name: str, category: str, source: str, country: str, lastUpdated: Date, quests[Question])
+		self.scrapper = scrapper 
+		self.url = url
+		self.title = name
+		self.cat = category
+		self.source = source
+		self.origin = country 
+		self.date = lastUpdated
+		self.quests = null
+
+	//If Data Source answered a question, append the Question into its collection
+	def ans(self, question: Question)
+		self.quests.add(Question)
+
+	//Return all the information for a Data Source 
+	def obtain(self)
+		return self 
+	
+
+
 logger = logging.getLogger(__name__)
 
 PATH = os.getcwd() + "/scrapers"
