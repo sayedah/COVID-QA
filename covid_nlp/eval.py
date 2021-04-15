@@ -46,5 +46,34 @@ if __name__ == "__main__":
     # eval & track results
     eval_question_similarity(y_true=y_true, y_pred=y_pred, lang=lang, model_name=model_name,
                              params=params, user="malte", log_to_mlflow=log_to_mlflow, run_name=experiment_name)
+    
+  
+
+Interface QuestionSet {
+    #iterate through the composite tree to obtain a similar question based on user response
+    def getQuestion()
+}
+
+Class Project: QuestionSet
+    int id
+    def _init_(self, id):
+        this.id = id  #each non leaf node, has a designated unique id to act as a root of a sub tree
+
+    def add(self, id, ques):
+    #add the new child element to the composite with the specified id
+
+    def remove(self, id):
+    #remove element with the specified id
+
+
+Class Question: QuestionSet
+    #return the question
+    String text
+    def _init_(self, text):
+        this.text = text
+
+    return this.text
+
+
 
 
