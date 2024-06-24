@@ -13,6 +13,26 @@ PATH = os.getcwd() + "/scrapers"
 RESULTS = []
 MISSED = []
 
+#Aggregate pattern
+Class DataSource:
+	def init(self, url: str, name: str, category: str, source: str, country: str, lastUpdated: Date, quests[Question])
+		self.scrapper = scrapper 
+		self.url = url
+		self.title = name
+		self.cat = category
+		self.source = source
+		self.origin = country 
+		self.date = lastUpdated
+		self.quests = null
+
+	#if Data Source answered a question, append the Question into its collection
+	def ans(self, question: Question)
+		self.quests.add(Question)
+
+	#return all the information for a Data Source 
+	def obtain(self)
+		return self 
+##
 
 class Pipeline(object):
     questionsOnly = True
